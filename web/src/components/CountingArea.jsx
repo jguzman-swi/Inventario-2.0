@@ -2,7 +2,7 @@ import React, { useMemo, useState, useEffect } from 'react';
 import ItemCounter from './ItemCounter';
 import Modal from './common/Modal';
 
-const API_URL = process.env.REACT_APP_API_URL || `http://${window.location.hostname}:3000/api`;
+const API_URL = import.meta.env.VITE_API_URL || `http://${window.location.hostname}:3000/api`;
 
 function CountingArea({ location, products, allProducts, categories, onFinish, session, currentUser, socket, onRefresh }) {
   const [searchTerm, setSearchTerm] = useState('');
