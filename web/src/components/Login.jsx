@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 const API_URL = `http://${window.location.hostname}:3005/api`;
@@ -65,7 +66,7 @@ function Login({ onLogin }) {
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
           <div style={{ textAlign: 'left' }}>
             <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--text-muted)' }}>USUARIO</label>
-            <input 
+            <input
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -89,7 +90,7 @@ function Login({ onLogin }) {
 
           <div style={{ textAlign: 'left' }}>
             <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--text-muted)' }}>PIN DE SEGURIDAD</label>
-            <input 
+            <input
               type="password"
               value={pin}
               onChange={(e) => setPin(e.target.value)}
@@ -115,12 +116,12 @@ function Login({ onLogin }) {
           </div>
 
           {error && (
-            <div style={{ 
-              background: 'rgba(239, 68, 68, 0.1)', 
-              color: '#ef4444', 
-              padding: '0.75rem', 
-              borderRadius: '8px', 
-              fontSize: '0.85rem', 
+            <div style={{
+              background: 'rgba(239, 68, 68, 0.1)',
+              color: '#ef4444',
+              padding: '0.75rem',
+              borderRadius: '8px',
+              fontSize: '0.85rem',
               fontWeight: 'bold',
               border: '1px solid rgba(239, 68, 68, 0.2)'
             }}>
@@ -128,8 +129,8 @@ function Login({ onLogin }) {
             </div>
           )}
 
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             disabled={loading}
             style={{
               width: '100%',
