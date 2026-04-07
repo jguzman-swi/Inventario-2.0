@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 
-const API_URL = `http://${window.location.hostname}:3005/api`;
+const API_URL = process.env.REACT_APP_API_URL || `http://${window.location.hostname}:3000/api`;
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState('');

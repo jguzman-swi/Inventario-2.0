@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 
-const API_URL = `http://${window.location.hostname}:3005/api`;
+const API_URL = process.env.REACT_APP_API_URL || `http://${window.location.hostname}:3000/api`;
 
 function Summary({ products, locations, branch, session, currentUser, recipes }) {
   const [report, setReport] = useState(null);

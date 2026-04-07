@@ -8,7 +8,7 @@ import Summary from './components/Summary';
 import AdminDashboard from './components/admin/AdminDashboard';
 import './index.css';
 
-const API_URL = `http://${window.location.hostname}:3005/api`;
+const API_URL = process.env.REACT_APP_API_URL || `http://${window.location.hostname}:3000/api`;
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState('login');

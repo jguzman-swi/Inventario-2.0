@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Modal from './common/Modal';
 
-const API_URL = `http://${window.location.hostname}:3005/api`;
+const API_URL = process.env.REACT_APP_API_URL || `http://${window.location.hostname}:3000/api`;
 
 function SessionSelector({ branches, onSessionSelected, currentUser }) {
   const [sessions, setSessions] = useState([]);
